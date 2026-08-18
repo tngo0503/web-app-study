@@ -1,0 +1,2 @@
+
+$('a#special').remove()

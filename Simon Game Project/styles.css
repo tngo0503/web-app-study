@@ -1,0 +1,28 @@
+.first-section{
+  font-family: cursive;
+}
+
+
+.pad{
+  font-size: 1.5rem;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+}
+
+.red{
+  background-color: red;
+}
+
+.yellow{
+  background-color: yellow;
+}
+
+.blue{
+  background-color: blue;
+}
+
+.green{
+  background-color: green;
+}

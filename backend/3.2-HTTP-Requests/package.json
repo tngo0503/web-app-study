@@ -1,0 +1,15 @@
+{
+  "name": "3.2-http-requests",
+  "version": "1.0.0",
+  "description": "I'm learning about http requests (get, post, put, patch, delete)",
+  "license": "ISC",
+  "author": "Truong Ngo",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

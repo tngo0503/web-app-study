@@ -1,0 +1,27 @@
+html{
+  background-color: black;
+}
+#motivation-div{
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 70px;
+}
+
+#image{
+  width: 100%;
+  border: 5px solid white;
+}
+
+#header{
+  font-family: "Libre Baskerville", serif;
+  text-align: center;
+  color: white;
+  background-color: black;
+  text-transform: uppercase;
+}
+
+#content{
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  text-align: center;
+}

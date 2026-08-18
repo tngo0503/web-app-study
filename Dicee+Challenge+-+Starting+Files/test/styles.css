@@ -1,0 +1,21 @@
+body{
+  background-color: grey;
+}
+
+h1{
+  text-align: center;
+  font-size: 5rem;
+}
+
+.player-text{
+  font-size: 2rem;
+}
+
+
+footer {
+  margin-top: 5%;
+  color: #EEEEEE;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+
+}
