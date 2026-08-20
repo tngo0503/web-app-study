@@ -4,18 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../public/css/style.css">
   <title>Your name</title>
 </head>
 
 <body>
   <% if(locals.fName && locals.lName) {%>
-    <h1>Enter your name below</h1>
+    <h1>Your name has <%= (locals.fName.length + locals.lName.length) %> characters.</h1>
   <% } else{%>
-      <h1>Your name has <%= (locals.fName.length + locals.lName.length) %>
-      </h1>
+    <h1>Enter your name below</h1>
   <% } %>
-
-  <%- include("partials/form.ejs") %>
+  <%- include("../partials/form.ejs") %>
 </body>
 
 </html>
