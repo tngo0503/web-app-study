@@ -1,0 +1,39 @@
+import express from "express";
+import morgan from "morgan";
+import bodyParser from "body-parser";
+import {dirname, join} from 'path';
+import { fileURLToPath } from "url";
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+const app = express();
+const port = 3000;
+
+app.set('view engine', 'ejs');
+app.set('views', join(__dirname, 'views'));
+
+app.use(express.static("public"));
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(morgan('dev'));
+
+/* Write your code here:
+Step 1: Render the home page "/" index.ejs
+Step 2: Make sure that static files are linked to and the CSS shows up.
+Step 3: Add the routes to handle the render of the about and contact pages.
+  Hint: Check the nav bar in the header.ejs to see the button hrefs
+Step 4: Add the partials to the about and contact pages to show the header and footer on those pages. */
+
+app.get('/', (req, res)=>{
+  res.status(200).render('index');
+});
+
+app.get('/about', (req, res)=>{
+  res.status(200).render('about');
+});
+
+app.get('/contact', (req, res)=>{
+  res.status(200).render('contact');
+});
+
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
