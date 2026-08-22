@@ -2,4 +2,8 @@ node_modules/
 .env
 .DS_Store
 *.log
+<<<<<<< HEAD
 solution.js
+=======
+solution.ejs
+>>>>>>> af4ddd2755d7344b56cafbce5610174ed80f6fda
