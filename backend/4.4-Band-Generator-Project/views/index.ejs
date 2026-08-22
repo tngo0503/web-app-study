@@ -1,25 +1,20 @@
-  <!-- Step 3 Add Header -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <% if(locals.band){ %>
-    <h1>Your band is <%= locals.band %></h1>
-  <%}else {%>
-    <h1>Click generate to get your band name</h1>
-  <% } %>
-  <form action="/submit" method="POST">
-    <input type="submit" value="Generate Name">
-  </form>
-</body>
-</html>
+<!-- Step 3 Add Header -->
+  <%- include('partials/header.ejs') %>
 
-<!-- Step 2 - If an adjective and noun are sent to this ejs file, 
+  <!-- Step 2 - If an adjective and noun are sent to this ejs file, 
     Change the h1 to show the adjective and noun.
     But when the user first goes on the website and there is no adjective and noun, 
     Show the default h1 below -->
-<!-- Step 3 Add Footer -->
+  <% if(locals.band){ %>
+    <h1>Your band is <%= locals.band %>
+    </h1>
+  <%}else {%>
+    <h1>Click generate to get your band name</h1>
+  <% } %>
+        
+  <form action="/submit" method="POST">
+    <input type="submit" value="Generate Name">
+  </form>
+
+  <!-- Step 3 Add Footer -->
+  <%- include('partials/footer.ejs') %>

@@ -1,12 +1,13 @@
 import express from "express";
 import bodyParser from "body-parser";
 import morgan from 'morgan';
-import {dirname, join} from 'path';
-import {fileURLToPath} from 'url';
+import { dirname, join } from 'path';
+import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
 const port = 3000;
+const year = new Date().getFullYear();
 
 //Step 3 - Make the styling show up.
 //Hint 1: CSS files are static files!
@@ -25,15 +26,10 @@ app.use(morgan('dev'));
 
 app.get("/", (req, res) => {
   //Step 1 - Make the get route work and render the index.ejs file.
-
-  console.log(adj[0]);
-  console.log(noun[0]);
-  console.log(`this is adj's length:  ${adj.length}`);
-  console.log(`This is noun's length: ${noun.length}`);
-  res.status(200).render('index');
+  res.status(200).render('index', { year: year });
 });
 
-app.post("/submit", getBand,(req, res) => {
+app.post("/submit", getBand, (req, res) => {
   //Step 2 - Make the generate name functionality work
   //Hint: When the "Generate Name" button in index.ejs is clicked, it should hit up this route.
   //Then:
@@ -41,19 +37,19 @@ app.post("/submit", getBand,(req, res) => {
   //scroll down to see the two arrays.
   //2. Send the index.ejs as a response and add the adjective and noun to the res.render
   //3. Test to make sure that the random words display in the h1 element in index.ejs
-  res.render('index');
+  res.render('index', { year: year });
 });
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
 
-function random(arr){
+function random(arr) {
   return Math.floor(Math.random() * arr.length);
 }
 
-function getBand(req, res, next){
-  res.locals.band =  `${adj[random(adj)]} ${noun[random(noun)]}`;
+function getBand(req, res, next) {
+  res.locals.band = `${adj[random(adj)]} ${noun[random(noun)]}`;
   next();
 }
 
