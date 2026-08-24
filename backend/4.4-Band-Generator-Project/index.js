@@ -37,7 +37,9 @@ app.post("/submit", getBand, (req, res) => {
   //scroll down to see the two arrays.
   //2. Send the index.ejs as a response and add the adjective and noun to the res.render
   //3. Test to make sure that the random words display in the h1 element in index.ejs
-  res.render('index', { year: year });
+  res.render('index', { 
+    year: year,
+    title: "Cool Band"});
 });
 
 app.listen(port, () => {
