@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Weekend Hiking Trip",
+    "content": "Went hiking up Bukhansan this weekend, the view from the summit was incredible. Definitely doing this again next month.",
+    "date": "2026-08-15",
+    "userName": "kim_dev"
+  },
+  {
+    "id": 2,
+    "title": "Learning Node.js fs module",
+    "content": "Finally got comfortable reading and writing JSON files with fs/promises. ESM modules make imports so much cleaner.",
+    "date": "2026-08-22",
+    "userName": "bae_pie"
+  }
+]

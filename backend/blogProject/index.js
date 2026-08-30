@@ -32,6 +32,6 @@ app.get('/', (req, res)=>{
   // for(let i = 0; i < courses.length; ++i){
   //   console.log(`course: ${courses[i]}`);
   // }
+
   res.status(200).render('index');
 });
-
