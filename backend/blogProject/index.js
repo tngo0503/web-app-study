@@ -20,9 +20,7 @@ app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
 
-
-
-app.get('/', (req, res)=>{
+app.get('/', (req, res) => {
+  res.locals['holder'] = 'course';
   res.status(200).render('index');
 });
-
