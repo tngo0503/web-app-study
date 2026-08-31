@@ -10,6 +10,7 @@ const port = 3000;
 const app = express();
 var courses = []
 
+
 app.set('view engine', 'ejs');
 app.set('views', join(__dirname, 'views'));
 
@@ -21,17 +22,13 @@ app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
 
-app.post('/', (req, res)=>{
-  courses.push(req.body.course);
+app.post('/', (req, res) => {
+  courses.push(req.body.newCourse);
   res.redirect('/');
 })
 
-app.get('/', (req, res)=>{
-  // console.log('go here?\n');
+app.get('/', (req, res) => {
   res.locals['courses'] = courses;
-  // for(let i = 0; i < courses.length; ++i){
-  //   console.log(`course: ${courses[i]}`);
-  // }
-
   res.status(200).render('index');
 });
+

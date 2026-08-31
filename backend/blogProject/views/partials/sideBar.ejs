@@ -1,16 +1,18 @@
-  <div class="sideBar">
-    <div class="container text-center">
-      <button class="btn btn-primary my-2" type="submit" data-bs-toggle="modal" data-bs-target="#modal-create-course">New course</button>
-    </div>
-
-    <div class="courseTable row ms-4">
-      <ul>
-
-        <% for( let i = 0; i < locals.courses.length; i++ ) { %>
-        <li class="my-2"><a href=""><%= locals.courses[i] %></a></li>
-        <% } %>
-
-      </ul>
-    </div>
+<div class="sideBar">
+  <div class="container text-center">
+    <button class="btn btn-primary my-2" type="submit" data-bs-toggle="modal" data-bs-target="#modal-create-course">New
+      course</button>
   </div>
 
+  <div class="courseTable">
+    <ul>
+
+      <% for( let i=0; i < locals.courses.length; i++ ) { %>
+        <li class="my-2"><a href="">
+            <%= locals.courses[i] %>
+          </a></li>
+        <% } %>
+
+    </ul>
+  </div>
+</div>
