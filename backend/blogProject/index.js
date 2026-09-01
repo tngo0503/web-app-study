@@ -29,6 +29,6 @@ app.post('/', (req, res) => {
 
 app.get('/', (req, res) => {
   res.locals['courses'] = courses;
-  res.status(200).render('index');
+  res.status(200).render('pages/index');
 });
 
