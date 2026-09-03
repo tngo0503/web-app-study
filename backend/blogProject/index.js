@@ -9,7 +9,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const port = 3000;
 const app = express();
 var courses = [];
-var lectures = [];
+
 
 
 app.set('view engine', 'ejs');
@@ -31,5 +31,13 @@ app.post('/', (req, res) => {
 app.get('/', (req, res) => {
   res.locals['courses'] = courses;
   res.status(200).render('pages/index');
+});
+
+app.get('/:courseId', (req, res)=>{
+  console.log(req.params.courseId);
+  if(courses.includes(req.params.courseId)){
+    
+  }
+  res.redirect('/');
 });
 
